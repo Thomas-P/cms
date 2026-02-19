@@ -1,5 +1,2 @@
-/*
- * Public API Surface of data
- */
-
-export * from './lib/data';
+export { type EditorApi, editorApi } from './lib/editor.api';
+export type { PageSummary, PageCreation } from './lib/generated/model/models';
