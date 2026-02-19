@@ -56,5 +56,13 @@
     "prettier": "3.8.1",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
+  },
+  "overrides": {
+    "ng-mocks": {
+      "@angular/core": "$@angular/core",
+      "@angular/common": "$@angular/common",
+      "@angular/forms": "$@angular/forms",
+      "@angular/platform-browser": "$@angular/platform-browser"
+    }
   }
 }
