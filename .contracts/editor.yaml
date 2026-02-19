@@ -15,14 +15,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/PageSummary'
+              $ref: '#/components/schemas/PageCreation'
       responses:
         '201':
           description: Page created successfully
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PageCreation'
+                $ref: '#/components/schemas/PageSummary'
     get:
       summary: List all pages
       operationId: 'listPages'
