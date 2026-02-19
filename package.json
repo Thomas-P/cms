@@ -48,6 +48,8 @@
     "@angular/cli": "^21.1.4",
     "@angular/compiler-cli": "^21.1.0",
     "@angular/material": "^21.1.5",
+    "@softarc/eslint-plugin-sheriff": "^0.19.6",
+    "@softarc/sheriff-core": "^0.19.6",
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
     "husky": "^9.1.7",
