@@ -105,8 +105,17 @@
         },
         "test": {
           "builder": "@angular/build:unit-test",
+          "configurations": {},
           "options": {
-            "tsConfig": "projects/editor/data/tsconfig.spec.json"
+            "tsConfig": "projects/editor/data/tsconfig.spec.json",
+            "coverageExclude": ["src/lib/generated"],
+            "coverageReporters": ["html", "lcov"],
+            "coverageWatermarks": {
+              "statements": [80, 80],
+              "branches": [80, 80],
+              "functions": [80, 80],
+              "lines": [80, 80]
+            }
           }
         },
         "lint": {
