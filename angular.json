@@ -84,6 +84,78 @@
           }
         }
       }
+    },
+    "@editor/domain": {
+      "projectType": "library",
+      "root": "projects/editor/domain",
+      "sourceRoot": "projects/editor/domain/src",
+      "prefix": "cms",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/editor/domain/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/editor/domain/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/editor/domain/tsconfig.spec.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/editor/domain/**/*.ts",
+              "projects/editor/domain/**/*.html"
+            ],
+            "eslintConfig": "projects/editor/domain/eslint.config.js"
+          }
+        }
+      }
+    },
+    "@editor/feature-overview": {
+      "projectType": "library",
+      "root": "projects/editor/feature-overview",
+      "sourceRoot": "projects/editor/feature-overview/src",
+      "prefix": "cms",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/editor/feature-overview/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/editor/feature-overview/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/editor/feature-overview/tsconfig.spec.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/editor/feature-overview/**/*.ts",
+              "projects/editor/feature-overview/**/*.html"
+            ],
+            "eslintConfig": "projects/editor/feature-overview/eslint.config.js"
+          }
+        }
+      }
     }
   }
 }

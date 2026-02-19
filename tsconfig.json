@@ -3,6 +3,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@editor/domain": ["./dist/editor/domain"],
+      "@editor/feature-overview": ["./dist/editor/feature-overview"]
+    },
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -28,6 +32,18 @@
     },
     {
       "path": "./projects/admin/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/editor/domain/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/editor/domain/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/editor/feature-overview/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/editor/feature-overview/tsconfig.spec.json"
     }
   ]
 }
