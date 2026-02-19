@@ -29,9 +29,7 @@
                 "input": "projects/admin/public"
               }
             ],
-            "styles": [
-              "projects/admin/src/styles.scss"
-            ],
+            "styles": ["projects/admin/src/styles.scss"],
             "server": "projects/admin/src/main.server.ts",
             "outputMode": "server",
             "ssr": {
