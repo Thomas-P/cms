@@ -1,5 +1,5 @@
 {
-  "name": "@editor/domain",
+  "name": "@editor/data",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^21.1.0",

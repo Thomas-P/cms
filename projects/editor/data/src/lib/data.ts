@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'cms-domain',
+  selector: 'cms-data',
   imports: [],
-  template: ` <p>domain works!</p> `,
+  template: ` <p>data works!</p> `,
   styles: ``,
 })
-export class Domain {}
+export class Data {}

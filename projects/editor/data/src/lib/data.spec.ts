@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Domain } from './domain';
+import { Data } from './data';
 
-describe('Domain', () => {
-  let component: Domain;
-  let fixture: ComponentFixture<Domain>;
+describe('Data', () => {
+  let component: Data;
+  let fixture: ComponentFixture<Data>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Domain],
+      imports: [Data],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Domain);
+    fixture = TestBed.createComponent(Data);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
