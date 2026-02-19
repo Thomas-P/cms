@@ -7,7 +7,7 @@ export * from './generated/model/models';
 /**
  * Tree shakable api.
  */
-export const editorApi = new InjectionToken('editor api', {
+export const editorApi = new InjectionToken<EditorApi>('editor api', {
   providedIn: 'root',
   factory() {
     const basePath = '/api/editor';
