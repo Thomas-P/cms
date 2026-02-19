@@ -1,13 +1,17 @@
 {
   "name": "cms",
   "version": "0.0.0",
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:admin": "node dist/admin/server/server.mjs"
+    "serve:ssr:admin": "node dist/admin/server/server.mjs",
+    "prepare": "husky"
   },
   "prettier": {
     "printWidth": 100,
@@ -46,7 +50,10 @@
     "@angular/material": "^21.1.5",
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
+    "husky": "^9.1.7",
     "jsdom": "^27.1.0",
+    "lint-staged": "^16.2.7",
+    "prettier": "3.8.1",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
   }
