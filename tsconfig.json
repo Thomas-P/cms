@@ -4,8 +4,8 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "@editor/domain": ["./dist/editor/domain"],
-      "@editor/feature-overview": ["./dist/editor/feature-overview"]
+      "@editor/domain": ["./projects/editor/domain/src/index.ts"],
+      "@editor/feature-overview": ["./projects/editor/feature-overview/src/index.ts"]
     },
     "strict": true,
     "noImplicitOverride": true,
