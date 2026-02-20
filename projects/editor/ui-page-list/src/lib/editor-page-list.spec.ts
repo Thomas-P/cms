@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UiPageList } from './ui-page-list';
+import { EditorPageList } from './editor-page-list';
 
-describe('UiPageList', () => {
-  let component: UiPageList;
-  let fixture: ComponentFixture<UiPageList>;
+describe('EditorPageList', () => {
+  let component: EditorPageList;
+  let fixture: ComponentFixture<EditorPageList>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UiPageList],
+      imports: [EditorPageList],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(UiPageList);
+    fixture = TestBed.createComponent(EditorPageList);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

@@ -7,6 +7,6 @@ import { PageSummary } from '@editor/data';
   template: ` <p>ui-page-list works!</p> `,
   styles: ``,
 })
-export class UiPageList {
+export class EditorPageList {
   readonly pages = input.required<PageSummary>();
 }

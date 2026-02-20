@@ -5,6 +5,9 @@ import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { PageSummary } from '@editor/data';
+import { EditorPageList } from '@editor/ui-page-list';
+import { MockComponent } from 'ng-mocks';
 
 describe('EditorOverview', () => {
   let component: EditorOverview;
@@ -20,9 +23,12 @@ describe('EditorOverview', () => {
   const getRetryButton = (): DebugElement =>
     fixture.debugElement.query(By.css('[data-automation-id=retry-loading-pages]'));
 
+  const getPageListComponent = (): EditorPageList =>
+    fixture.debugElement.query(By.css('[data-automation-id=page-list-shown]'))?.componentInstance;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EditorOverview],
+      imports: [EditorOverview, MockComponent(EditorPageList)],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 
@@ -60,5 +66,20 @@ describe('EditorOverview', () => {
     fixture.detectChanges();
     expect(getLoadingIndicator()).toBeTruthy();
     expect(getErrorPage()).toBeFalsy();
+  });
+
+  it('should show the page list, if loaded.', async () => {
+    const pages: PageSummary[] = [
+      {
+        path: '<path>',
+        title: '<title>',
+        id: '<id>',
+      },
+    ];
+    const request = httpTestingController.expectOne('/api/editor/pages');
+    request.flush(pages);
+    await fixture.whenStable();
+    const pageList = getPageListComponent();
+    expect(pageList.pages).toEqual(pages);
   });
 });
