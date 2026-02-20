@@ -5,7 +5,8 @@
   "compilerOptions": {
     "paths": {
       "@editor/data": ["./projects/editor/data/src/index.ts"],
-      "@editor/feature-overview": ["./projects/editor/feature-overview/src/index.ts"]
+      "@editor/feature-overview": ["./projects/editor/feature-overview/src/index.ts"],
+      "@editor/ui-page-list": ["./dist/editor/ui-page-list"]
     },
     "strict": true,
     "noImplicitOverride": true,
@@ -41,6 +42,12 @@
     },
     {
       "path": "./projects/editor/feature-overview/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/editor/ui-page-list/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/editor/ui-page-list/tsconfig.spec.json"
     }
   ]
 }
