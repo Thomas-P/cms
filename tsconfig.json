@@ -6,7 +6,7 @@
     "paths": {
       "@editor/data": ["./projects/editor/data/src/index.ts"],
       "@editor/feature-overview": ["./projects/editor/feature-overview/src/index.ts"],
-      "@editor/ui-page-list": ["./dist/editor/ui-page-list"]
+      "@editor/ui-page-list": ["./projects/editor/ui-page-list/src/index.ts"]
     },
     "strict": true,
     "noImplicitOverride": true,
