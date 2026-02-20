@@ -45,6 +45,8 @@ describe('EditorOverview', () => {
   it('should show a loading indicator, while loading the pages', async () => {
     const request = httpTestingController.expectOne('/api/editor/pages');
     expect(getLoadingIndicator()).toBeTruthy();
+    expect(getPageListComponent()).toBeFalsy();
+    expect(getErrorPage()).toBeFalsy();
     request.flush([]);
     await fixture.whenStable();
     expect(getLoadingIndicator()).toBeFalsy();
@@ -58,6 +60,8 @@ describe('EditorOverview', () => {
       statusText: 'Not Found',
     });
     await fixture.whenStable();
+    expect(getPageListComponent()).toBeFalsy();
+    expect(getLoadingIndicator()).toBeFalsy();
     expect(getErrorPage()).toBeTruthy();
     expect(getErrorPage().innerHTML).toContain('Something went wrong.'); // todo later add a proper message.
     expect(getRetryButton()).toBeTruthy();
@@ -66,6 +70,7 @@ describe('EditorOverview', () => {
     fixture.detectChanges();
     expect(getLoadingIndicator()).toBeTruthy();
     expect(getErrorPage()).toBeFalsy();
+    expect(getPageListComponent()).toBeFalsy();
   });
 
   it('should show the page list, if loaded.', async () => {
@@ -81,5 +86,7 @@ describe('EditorOverview', () => {
     await fixture.whenStable();
     const pageList = getPageListComponent();
     expect(pageList.pages).toEqual(pages);
+    expect(getErrorPage()).toBeFalsy();
+    expect(getLoadingIndicator()).toBeFalsy();
   });
 });
