@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { editorApi } from '@editor/data';
+import { EditorPageList } from '@editor/ui-page-list';
 
 @Component({
   selector: 'editor-overview',
-  imports: [],
+  imports: [EditorPageList],
   templateUrl: 'editor-overview.html',
   styles: ``,
 })

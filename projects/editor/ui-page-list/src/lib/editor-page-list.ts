@@ -8,5 +8,5 @@ import { PageSummary } from '@editor/data';
   styles: ``,
 })
 export class EditorPageList {
-  readonly pages = input.required<PageSummary>();
+  readonly pages = input.required<PageSummary[]>();
 }
