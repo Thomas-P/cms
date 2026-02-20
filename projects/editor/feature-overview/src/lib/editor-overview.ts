@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'cms-editor-overview',
+  selector: 'editor-overview',
   imports: [],
   template: ` <p>feature-overview works!</p> `,
   styles: ``,

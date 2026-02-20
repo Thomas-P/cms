@@ -11,7 +11,7 @@ module.exports = defineConfig([
         'error',
         {
           type: 'attribute',
-          prefix: 'cms',
+          prefix: 'editor',
           style: 'camelCase',
         },
       ],
@@ -19,7 +19,7 @@ module.exports = defineConfig([
         'error',
         {
           type: 'element',
-          prefix: 'cms',
+          prefix: 'editor',
           style: 'kebab-case',
         },
       ],

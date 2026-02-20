@@ -89,7 +89,7 @@
       "projectType": "library",
       "root": "projects/editor/data",
       "sourceRoot": "projects/editor/data/src",
-      "prefix": "cms",
+      "prefix": "editor",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
@@ -131,7 +131,7 @@
       "projectType": "library",
       "root": "projects/editor/feature-overview",
       "sourceRoot": "projects/editor/feature-overview/src",
-      "prefix": "cms",
+      "prefix": "editor",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
