@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'cms-feature-overview',
+  selector: 'cms-editor-overview',
   imports: [],
   template: ` <p>feature-overview works!</p> `,
   styles: ``,
 })
-export class FeatureOverview {}
+export class EditorOverview {}

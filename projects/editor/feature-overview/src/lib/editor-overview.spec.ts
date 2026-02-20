@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FeatureOverview } from './feature-overview';
+import { EditorOverview } from './editor-overview';
 
-describe('FeatureOverview', () => {
-  let component: FeatureOverview;
-  let fixture: ComponentFixture<FeatureOverview>;
+describe('EditorOverview', () => {
+  let component: EditorOverview;
+  let fixture: ComponentFixture<EditorOverview>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FeatureOverview],
+      imports: [EditorOverview],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(FeatureOverview);
+    fixture = TestBed.createComponent(EditorOverview);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
