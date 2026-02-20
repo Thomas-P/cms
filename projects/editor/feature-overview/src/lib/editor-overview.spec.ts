@@ -15,7 +15,7 @@ describe('EditorOverview', () => {
     fixture.debugElement.query(By.css('[data-automation-id=pages-are-loading]'));
 
   const getErrorPage = (): HTMLElement =>
-    fixture.debugElement.query(By.css('[data-automation-id=loading-pages-failed]')).nativeElement;
+    fixture.debugElement.query(By.css('[data-automation-id=loading-pages-failed]'))?.nativeElement;
 
   const getRetryButton = (): DebugElement =>
     fixture.debugElement.query(By.css('[data-automation-id=retry-loading-pages]'));

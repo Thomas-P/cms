@@ -1,5 +1,11 @@
 @let isLoading = pageRequest.isLoading();
+@let isError = pageRequest.error();
 
 @if (isLoading) {
   <p data-automation-id="pages-are-loading">Loading pages</p>
+} @else if (isError) {
+  <p data-automation-id="loading-pages-failed">Something went wrong.</p>
+  <button type="button" data-automation-id="retry-loading-pages" (click)="pageRequest.reload()">
+    Retry
+  </button>
 }
