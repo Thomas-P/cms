@@ -1,3 +1,5 @@
+[![CI/CD Pipeline](https://github.com/Thomas-P/cms/actions/workflows/ci.yaml/badge.svg)](https://github.com/Thomas-P/cms/actions/workflows/ci.yaml)
+
 # Cms
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
