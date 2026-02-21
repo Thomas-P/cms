@@ -2,8 +2,6 @@ import { inject, InjectionToken } from '@angular/core';
 import { DefaultService as EditorApi } from './generated';
 import { HttpClient } from '@angular/common/http';
 
-export * from './generated/model/models';
-
 /**
  * Tree shakable api.
  */

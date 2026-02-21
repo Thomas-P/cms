@@ -43,4 +43,7 @@ module.exports = defineConfig([
     files: ['**/*.ts'],
     extends: [sheriff.configs.all],
   },
+  {
+    ignores: ['projects/editor/data/src/lib/generated/**/*.ts'],
+  },
 ]);

@@ -5,6 +5,7 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "scripts": {
+    "postinstall": "sh .api-install.sh",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build admin",

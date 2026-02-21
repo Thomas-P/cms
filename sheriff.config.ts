@@ -14,6 +14,7 @@ export const config: SheriffConfig = {
   depRules: {
     'domain:*': ({ from, to }) => from === to,
     'type:feature': 'type:data',
-    root: ['type:feature'],
+    root: ['type:feature', 'noTag'],
+    noTag: ['noTag', 'root'],
   },
 };

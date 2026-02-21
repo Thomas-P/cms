@@ -1,8 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
-import { editorApi, type EditorApi, PageCreation, type PageSummary } from './editor.api';
+import { editorApi, type EditorApi } from './editor.api';
 import { firstValueFrom } from 'rxjs';
+import type { PageSummary, PageCreation } from './generated';
 
 describe('EditorApi', () => {
   let service: EditorApi;

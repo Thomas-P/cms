@@ -7,22 +7,23 @@ module.exports = defineConfig([
   {
     files: ['**/*.ts'],
     rules: {
-      '@angular-eslint/directive-selector': [
-        'error',
-        {
-          type: 'attribute',
-          prefix: 'editor',
-          style: 'camelCase',
-        },
-      ],
-      '@angular-eslint/component-selector': [
-        'error',
-        {
-          type: 'element',
-          prefix: 'editor',
-          style: 'kebab-case',
-        },
-      ],
+      // not for the data layer
+      // '@angular-eslint/directive-selector': [
+      //   'error',
+      //   {
+      //     type: 'attribute',
+      //     prefix: 'editor',
+      //     style: 'camelCase',
+      //   },
+      // ],
+      // '@angular-eslint/component-selector': [
+      //   'error',
+      //   {
+      //     type: 'element',
+      //     prefix: 'editor',
+      //     style: 'kebab-case',
+      //   },
+      // ],
     },
   },
   {

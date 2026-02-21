@@ -77,7 +77,13 @@
           "builder": "@angular/build:unit-test",
           "options": {
             "coverage": true,
-            "coverageReporters": ["text", "cobertura", "html"]
+            "coverageReporters": ["text", "cobertura", "html"],
+            "coverageWatermarks": {
+              "statements": [80, 80],
+              "branches": [80, 80],
+              "functions": [80, 80],
+              "lines": [80, 80]
+            }
           }
         },
         "lint": {
@@ -112,8 +118,9 @@
           "configurations": {},
           "options": {
             "tsConfig": "projects/editor/data/tsconfig.spec.json",
+            "coverage": true,
             "coverageExclude": ["src/lib/generated"],
-            "coverageReporters": ["html", "lcov"],
+            "coverageReporters": ["text", "cobertura", "html"],
             "coverageWatermarks": {
               "statements": [80, 80],
               "branches": [80, 80],
@@ -152,7 +159,15 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
-            "tsConfig": "projects/editor/feature-overview/tsconfig.spec.json"
+            "tsConfig": "projects/editor/feature-overview/tsconfig.spec.json",
+            "coverage": true,
+            "coverageReporters": ["text", "cobertura", "html"],
+            "coverageWatermarks": {
+              "statements": [80, 80],
+              "branches": [80, 80],
+              "functions": [80, 80],
+              "lines": [80, 80]
+            }
           }
         },
         "lint": {
@@ -188,7 +203,15 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
-            "tsConfig": "projects/editor/ui-page-list/tsconfig.spec.json"
+            "tsConfig": "projects/editor/ui-page-list/tsconfig.spec.json",
+            "coverage": true,
+            "coverageReporters": ["text", "cobertura", "html"],
+            "coverageWatermarks": {
+              "statements": [80, 80],
+              "branches": [80, 80],
+              "functions": [80, 80],
+              "lines": [80, 80]
+            }
           }
         },
         "lint": {
