@@ -1,4 +1,8 @@
+[![Angular](https://img.shields.io/badge/Angular-21-red.svg)](https://angular.dev)
+[![Vitest](https://img.shields.io/badge/Vitest-4.0-green.svg)](https://vitest.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![CI/CD Pipeline](https://github.com/Thomas-P/cms/actions/workflows/ci.yaml/badge.svg)](https://github.com/Thomas-P/cms/actions/workflows/ci.yaml)
+[![codecov](https://codecov.io/gh/Thomas-P/cms/graph/badge.svg?token=1EHRSSWE16)](https://codecov.io/gh/Thomas-P/cms)
 
 # Cms
 
