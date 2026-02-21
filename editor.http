@@ -1,0 +1,12 @@
+### GET pages from editor
+GET http://localhost:4010/pages
+###
+
+
+POST http://localhost:4010/pages
+Content-Type: application/json
+
+{
+  "title": "My Page",
+  "path": "my-page"
+}

@@ -3,6 +3,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@editor/data": ["./projects/editor/data/src/index.ts"],
+      "@editor/feature-overview": ["./projects/editor/feature-overview/src/index.ts"],
+      "@editor/ui-page-list": ["./projects/editor/ui-page-list/src/index.ts"]
+    },
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -28,6 +33,21 @@
     },
     {
       "path": "./projects/admin/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/editor/data/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/editor/feature-overview/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/editor/feature-overview/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/editor/ui-page-list/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/editor/ui-page-list/tsconfig.spec.json"
     }
   ]
 }

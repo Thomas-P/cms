@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: Editor API
+  version: 1.0.0
+  description: API for managing the editor functionalities
+servers:
+  - url: http://localhost:8080/
+    description: Production server
+paths:
+  /pages:
+    post:
+      summary: Create a new page
+      operationId: 'createPage'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PageCreation'
+      responses:
+        '201':
+          description: Page created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PageSummary'
+    get:
+      summary: List all pages
+      operationId: 'listPages'
+      responses:
+        '200':
+          description: A list of pages
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PageSummary'
+components:
+  schemas:
+    PageCreation:
+      type: object
+      properties:
+        title:
+          type: string
+          description: The title of the page
+          example: My First Page
+        path:
+          type: string
+          description: The path or slug for the page
+          example: my-first-page
+      required:
+        - title
+        - path
+    PageSummary:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The unique identifier for the page
+          example: abcdef123456
+        title:
+          type: string
+          description: The title of the page
+          example: My First Page
+        path:
+          type: string
+          description: The path or slug for the page
+          example: my-first-page
+      required:
+        - id
+        - title
+  securitySchemes:
+    BearerAuth:
+      type: 'http'
+      scheme: 'bearer'
+      bearerFormat: 'JWT'

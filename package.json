@@ -5,9 +5,10 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "scripts": {
+    "postinstall": "sh .api-install.sh",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build admin",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch false",
     "serve:ssr:admin": "node dist/admin/server/server.mjs",
@@ -45,10 +46,12 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@analogjs/vite-plugin-angular": "^2.2.3",
     "@angular/build": "^21.1.4",
     "@angular/cli": "^21.1.4",
     "@angular/compiler-cli": "^21.1.0",
     "@angular/material": "^21.1.5",
+    "@openapitools/openapi-generator-cli": "^2.29.0",
     "@softarc/eslint-plugin-sheriff": "^0.19.6",
     "@softarc/sheriff-core": "^0.19.6",
     "@types/express": "^5.0.1",
@@ -59,9 +62,11 @@
     "husky": "^9.1.7",
     "jsdom": "^27.1.0",
     "lint-staged": "^16.2.7",
+    "ng-packagr": "^21.1.0",
     "prettier": "3.8.1",
     "typescript": "~5.9.2",
     "typescript-eslint": "8.50.1",
+    "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.0.8"
   },
   "overrides": {

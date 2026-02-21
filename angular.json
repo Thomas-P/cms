@@ -77,7 +77,13 @@
           "builder": "@angular/build:unit-test",
           "options": {
             "coverage": true,
-            "coverageReporters": ["text", "cobertura", "html"]
+            "coverageReporters": ["text", "cobertura", "html"],
+            "coverageWatermarks": {
+              "statements": [80, 80],
+              "branches": [80, 80],
+              "functions": [80, 80],
+              "lines": [80, 80]
+            }
           }
         },
         "lint": {
@@ -85,6 +91,138 @@
           "options": {
             "lintFilePatterns": ["projects/admin/**/*.ts", "projects/admin/**/*.html"],
             "eslintConfig": "projects/admin/eslint.config.js"
+          }
+        }
+      }
+    },
+    "@editor/data": {
+      "projectType": "library",
+      "root": "projects/editor/data",
+      "sourceRoot": "projects/editor/data/src",
+      "prefix": "editor",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/editor/data/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/editor/data/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "configurations": {},
+          "options": {
+            "tsConfig": "projects/editor/data/tsconfig.spec.json",
+            "coverage": true,
+            "coverageExclude": ["src/lib/generated"],
+            "coverageReporters": ["text", "cobertura", "html"],
+            "coverageWatermarks": {
+              "statements": [80, 80],
+              "branches": [80, 80],
+              "functions": [80, 80],
+              "lines": [80, 80]
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["projects/editor/data/**/*.ts", "projects/editor/data/**/*.html"],
+            "eslintConfig": "projects/editor/data/eslint.config.js"
+          }
+        }
+      }
+    },
+    "@editor/feature-overview": {
+      "projectType": "library",
+      "root": "projects/editor/feature-overview",
+      "sourceRoot": "projects/editor/feature-overview/src",
+      "prefix": "editor",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/editor/feature-overview/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/editor/feature-overview/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "runnerConfig": "projects/editor/feature-overview/vite.config.ts",
+            "tsConfig": "projects/editor/feature-overview/tsconfig.spec.json",
+            "coverage": true,
+            "coverageReporters": ["text", "cobertura", "html"],
+            "coverageWatermarks": {
+              "statements": [80, 80],
+              "branches": [80, 80],
+              "functions": [80, 80],
+              "lines": [80, 80]
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/editor/feature-overview/**/*.ts",
+              "projects/editor/feature-overview/**/*.html"
+            ],
+            "eslintConfig": "projects/editor/feature-overview/eslint.config.js"
+          }
+        }
+      }
+    },
+    "@editor/ui-page-list": {
+      "projectType": "library",
+      "root": "projects/editor/ui-page-list",
+      "sourceRoot": "projects/editor/ui-page-list/src",
+      "prefix": "editor",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/editor/ui-page-list/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/editor/ui-page-list/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/editor/ui-page-list/tsconfig.spec.json",
+            "coverage": true,
+            "coverageReporters": ["text", "cobertura", "html"],
+            "coverageWatermarks": {
+              "statements": [80, 80],
+              "branches": [80, 80],
+              "functions": [80, 80],
+              "lines": [80, 80]
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/editor/ui-page-list/**/*.ts",
+              "projects/editor/ui-page-list/**/*.html"
+            ],
+            "eslintConfig": "projects/editor/ui-page-list/eslint.config.js"
           }
         }
       }
