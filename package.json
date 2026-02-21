@@ -53,6 +53,7 @@
     "@softarc/sheriff-core": "^0.19.6",
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
+    "@vitest/coverage-v8": "^4.0.18",
     "angular-eslint": "21.2.0",
     "eslint": "^9.39.2",
     "husky": "^9.1.7",
