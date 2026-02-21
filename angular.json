@@ -159,6 +159,7 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
+            "runnerConfig": "projects/editor/feature-overview/vite.config.ts",
             "tsConfig": "projects/editor/feature-overview/tsconfig.spec.json",
             "coverage": true,
             "coverageReporters": ["text", "cobertura", "html"],

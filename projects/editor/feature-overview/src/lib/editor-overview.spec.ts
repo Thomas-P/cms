@@ -85,7 +85,7 @@ describe('EditorOverview', () => {
     request.flush(pages);
     await fixture.whenStable();
     const pageList = getPageListComponent();
-    expect(pageList.pages).toEqual(pages);
+    expect(pageList.pages()).toEqual(pages);
     expect(getErrorPage()).toBeFalsy();
     expect(getLoadingIndicator()).toBeFalsy();
   });
